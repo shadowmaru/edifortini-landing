@@ -52,11 +52,9 @@ const Social = styled.ul`
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   li {
     display: inline;
-    &:not([data-name='social-entry-0']) {
-      margin-left: 2.5rem;
-      @media (max-width: ${props => props.theme.breakpoints.s}) {
-        margin-left: 1.75rem;
-      }
+    margin-right: 2rem;
+    @media (max-width: ${props => props.theme.breakpoints.s}) {
+      margin-right: 1.5rem;
     }
     a {
       font-style: normal;
