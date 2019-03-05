@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+sitemap: https://edifortini-landing.netlify.com/sitemap.xml
