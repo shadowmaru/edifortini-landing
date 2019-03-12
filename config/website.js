@@ -8,7 +8,7 @@ module.exports = {
     'I’m Edi Fortini, a photographer currently living and working in São Paulo, SP. I’m also studying Librarianship and Web Development.', // Headline for schema.org JSONLD
   url: 'https://edifortini.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/logos/landing.jpg', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
