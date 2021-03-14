@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Tooltip } from 'react-tippy'
 
 const Icon = styled(FontAwesomeIcon)`
-  font-size: 3rem;
+  font-size: 1.33rem;
 `
 
 class SocialLink extends Component {
@@ -14,7 +14,7 @@ class SocialLink extends Component {
     const icon = fontAwesomeIcon.split('-')[0] === 'fab' ? ['fab', fontAwesomeIcon.split('-')[1]] : fontAwesomeIcon
     return (
       <li data-name={`social-entry-${index}`}>
-        <Tooltip title={label} position="bottom" trigger="mouseenter" distance="20">
+        <Tooltip title={label} position="top" trigger="mouseenter" distance="20" size="small">
           <a href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
             <Icon icon={icon} />
           </a>
