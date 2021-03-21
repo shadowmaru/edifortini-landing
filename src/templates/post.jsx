@@ -10,6 +10,10 @@ const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyDarker};
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 `
 
 const Headline = styled.p`
@@ -31,7 +35,9 @@ const PostTitle = styled.h1`
   text-align: center;
 `
 
-const PostWrapper = Wrapper.withComponent('main')
+const PostWrapper = styled(Wrapper)`
+  margin-top: 120px;
+`
 
 const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost
@@ -53,13 +59,13 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
           <Header />
         </Wrapper>
       </Hero>
-      <PostWrapper id={website.skipNavId}>
+      <PostWrapper id={website.skipNavId} as="main">
         <Headline>
           {data.date} — {categories && <Categories categories={categories} />}
         </Headline>
         <PostTitle>{data.title.text}</PostTitle>
         <SliceZone allSlices={data.body} />
-        <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
+        <Title style={{ marginTop: '4rem' }}>Conteúdos recentes</Title>
         <Listing posts={posts.edges} />
       </PostWrapper>
     </Layout>

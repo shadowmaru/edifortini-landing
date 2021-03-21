@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
 const StyledFooter = styled.footer`
-  max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-  color: ${props => props.theme.colors.grey};
+  color: ${props => props.theme.colors.greyLight};
+  background: ${props => props.theme.colors.greyDarker};
 `
 
 class Footer extends Component {

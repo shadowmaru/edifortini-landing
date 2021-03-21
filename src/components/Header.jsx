@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import { SocialLink } from '.'
-import Logo from '../../static/logos/edi-fortini.jpg'
+import Logo from '../../static/logos/edi-fortini.svg'
 
 const StyledHeader = styled.nav`
   a {
@@ -20,7 +20,7 @@ const StyledHeader = styled.nav`
   justify-content: space-between;
   align-items: flex-start;
   overflow-y: hidden;
-  height: 40px;
+  height: 45px;
   font-size: 0.8rem;
 `
 
@@ -41,6 +41,9 @@ const NavStyles = css`
     padding: 10px 12px;
     color: #fff;
     opacity: 0.8;
+  }
+  li:first-child a {
+    padding: 0 12px;
   }
   li a:hover {
     text-decoration: none;
@@ -73,6 +76,11 @@ const SiteNavRight = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
+`
+
+const StyledLogo = styled.img`
+  height: 72px;
+  margin-top: -13px;
 `
 
 const SocialLinks = styled.ul`
@@ -115,7 +123,7 @@ class Header extends Component {
           <ul css={NavStyles} role="menu">
             <li role="menuitem">
               <Link to="/" aria-label="Back to Home">
-                <img src={Logo} alt="Home" />
+                <StyledLogo src={Logo} alt="Home" />
               </Link>
             </li>
             <li role="menuitem">
