@@ -9,8 +9,8 @@ const theme = {
     greyDark: '#303643',
     greyDarker: '#1c252b',
   },
-  maxWidth: '1000px',
-  maxWidthText: '720px',
+  maxWidth: '1040px',
+  maxWidthText: '960px',
   breakpoints: {
     xs: '400px',
     s: '600px',
