@@ -13,7 +13,22 @@ import Wrapper from './Wrapper'
 import SocialLink from './SocialLink'
 import PostCard from './PostCard'
 import MainImage from './MainImage'
+import SiteNav from './SiteNav'
 
 library.add(fab, faEnvelope, faImages)
 
-export { Footer, Layout, Listing, MainImage, SEO, Wrapper, SliceZone, Title, Header, HeaderHome, SocialLink, PostCard }
+export {
+  Footer,
+  Layout,
+  Listing,
+  MainImage,
+  SEO,
+  Wrapper,
+  SliceZone,
+  Title,
+  Header,
+  HeaderHome,
+  SiteNav,
+  SocialLink,
+  PostCard,
+}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { SocialLink } from '.'
-import Logo from '../../static/logos/edi-fortini.svg'
+import { SocialLink, SiteNav } from '.'
 
 const StyledHeader = styled.nav`
   a {
@@ -19,43 +17,16 @@ const StyledHeader = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  overflow-y: hidden;
+  overflow-y: visible;
   height: 45px;
   font-size: 0.8rem;
-`
-
-const NavStyles = css`
-  display: flex;
-  margin: 0 0 0 -12px;
-  padding: 0;
-  list-style: none;
-  li {
-    display: block;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-  li a {
-    display: block;
-    margin: 0;
-    padding: 10px 12px;
-    color: #fff;
-    opacity: 0.8;
-  }
-  li:first-child a {
-    padding: 0 12px;
-  }
-  li a:hover {
-    text-decoration: none;
-    opacity: 1;
-  }
 `
 
 const SiteNavLeft = styled.div`
   display: flex;
   align-items: center;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
   padding-bottom: 80px;
@@ -76,11 +47,6 @@ const SiteNavRight = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
-`
-
-const StyledLogo = styled.img`
-  height: 72px;
-  margin-top: -13px;
 `
 
 const SocialLinks = styled.ul`
@@ -120,43 +86,7 @@ class Header extends Component {
     return (
       <StyledHeader invert={invert}>
         <SiteNavLeft>
-          <ul css={NavStyles} role="menu">
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                <StyledLogo src={Logo} alt="Home" />
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                Sobre
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                Projetos
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                Publicações
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                Contato
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                Textos
-              </Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/" aria-label="Back to Home">
-                UX
-              </Link>
-            </li>
-          </ul>
+          <SiteNav />
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>

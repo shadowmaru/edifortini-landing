@@ -1,12 +1,12 @@
 const theme = {
   colors: {
-    primary: '#8a3dae',
+    primary: '#e095bb',
     bg: '#fff',
     black: '#000',
-    greyLight: '#EBEDF2',
+    greyLight: '#c3b7cb',
     greyBlue: '#a2bce2',
     grey: '#595C62',
-    greyDark: '#303643',
+    greyDark: '#3d3b3b',
     greyDarker: '#1c252b',
   },
   maxWidth: '1040px',
