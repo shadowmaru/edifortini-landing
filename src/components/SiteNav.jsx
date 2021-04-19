@@ -67,7 +67,7 @@ class SiteNav extends Component {
           </Link>
         </li>
         <li role="menuitem">
-          <Link to="/contato" aria-label="Ir para Contato">
+          <Link to="/contact" aria-label="Ir para Contato">
             Contato
           </Link>
         </li>

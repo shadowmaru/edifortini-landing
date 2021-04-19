@@ -25,15 +25,15 @@ const PostWrapper = styled(Wrapper)`
   margin-top: 120px;
 `
 
-const About = ({ data: { about, posts }, location }) => {
-  const { data } = about
+const Contact = ({ data: { contact, posts }, location }) => {
+  const { data } = contact
   return (
     <Layout customSEO>
       <SEO
         title={`${data.title.text} | ${website.titleAlt}`}
         pathname={location.pathname}
         desc={data.description}
-        node={about}
+        node={contact}
         article
       />
       <Hero>
@@ -52,9 +52,9 @@ const About = ({ data: { about, posts }, location }) => {
   )
 }
 
-export default About
+export default Contact
 
-About.propTypes = {
+Contact.propTypes = {
   data: PropTypes.shape({}).isRequired,
 }
 
@@ -62,8 +62,8 @@ About.propTypes = {
 // If this doesn't work for you query for __typename in body {} and GraphiQL will show them to you
 
 export const pageQuery = graphql`
-  query AboutQuery {
-    about: prismicAbout {
+  query ContactQuery {
+    contact: prismicContact {
       first_publication_date
       last_publication_date
       data {
@@ -71,7 +71,7 @@ export const pageQuery = graphql`
           text
         }
         body {
-          ... on PrismicAboutBodyText {
+          ... on PrismicContactBodyText {
             slice_type
             id
             primary {
@@ -80,7 +80,7 @@ export const pageQuery = graphql`
               }
             }
           }
-          ... on PrismicAboutBodyImage {
+          ... on PrismicContactBodyImage {
             slice_type
             id
             primary {
