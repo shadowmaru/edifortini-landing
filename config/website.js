@@ -3,18 +3,18 @@ module.exports = {
   title: 'Edi Fortini', // Navigation and Site Title
   titleAlt: 'Edi Fortini', // Title for JSONLD
   description:
-    'I’m Edi Fortini, a photographer currently living and working in São Paulo, SP. I’m also studying Librarianship and Web Development.',
+    'I’m Edi Fortini: UX Designer, Librarian and Photographer, currently living in São Paulo, SP, Brazil. I’m also a Psychology and Neuroscience student.',
   headline:
-    'I’m Edi Fortini, a photographer currently living and working in São Paulo, SP. I’m also studying Librarianship and Web Development.', // Headline for schema.org JSONLD
+    'I’m Edi Fortini: UX Designer, Librarian and Photographer, currently living in São Paulo, SP, Brazil. I’m also a Psychology and Neuroscience student.', // Headline for schema.org JSONLD
   url: 'https://edifortini.com', // Domain of your site. No trailing slash!
-  siteLanguage: 'en', // Language Tag on <html> element
+  siteLanguage: 'pt-BR', // Language Tag on <html> element
   logo: '/logos/landing.jpg', // Used for SEO
-  ogLanguage: 'en_US', // Facebook Language
+  ogLanguage: 'pt_BR', // Facebook Language
 
   // JSONLD / Manifest
   favicon: 'src/favicon.png', // Used for manifest favicon generation
   shortName: 'Prismic', // shortname for manifest. MUST be shorter than 12 characters
-  author: 'Ricardo Yasuda', // Author for schemaORGJSONLD
+  author: 'Edi Fortini', // Author for schemaORGJSONLD
   themeColor: '#3D63AE',
   backgroundColor: '#EBEDF2',
 

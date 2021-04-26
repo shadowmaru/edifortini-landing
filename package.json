@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-prismicio",
-  "description": "A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS Prismic",
+  "name": "edi-fortini-landing",
+  "description": "Landing Page for edifortini.com",
   "license": "MIT",
   "version": "1.0.0",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "author": "Ricardo Yasuda <ricardo@yasuda.dev.br>",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -o",

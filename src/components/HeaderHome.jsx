@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { SocialLink, SiteNav } from '.'
+import { SiteNav, SocialLink } from '.'
+import Logo from '../../static/logos/edi-fortini-logo.svg'
 
 const StyledHeader = styled.nav`
   a {
@@ -13,20 +14,25 @@ const StyledHeader = styled.nav`
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   position: relative;
+  top: -50px;
   z-index: 300;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  overflow-y: visible;
   height: 45px;
   font-size: 0.8rem;
+`
+
+const Hero = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const SiteNavLeft = styled.div`
   display: flex;
   align-items: center;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
   padding-bottom: 80px;
@@ -47,6 +53,11 @@ const SiteNavRight = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
+`
+
+const StyledLogo = styled.img`
+  height: 300px;
+  margin: 10px auto;
 `
 
 const SocialLinks = styled.ul`
@@ -80,71 +91,74 @@ const SocialLinks = styled.ul`
   }
 `
 
-class Header extends Component {
+class HeaderHome extends Component {
   render() {
     const { invert } = this.props
     return (
-      <StyledHeader invert={invert}>
-        <SiteNavLeft>
-          <SiteNav />
-        </SiteNavLeft>
-        <SiteNavRight>
-          <SocialLinks>
-            <SocialLink
-              key="linkedin"
-              index={1}
-              label="LinkedIn"
-              url="https://www.linkedin.com/in/edifortini"
-              fontAwesomeIcon="fab-linkedin"
-            />
-            <SocialLink
-              key="twitter"
-              index={2}
-              label="Twitter"
-              url="https://twitter.com/edifortini"
-              fontAwesomeIcon="fab-twitter"
-            />
-            <SocialLink
-              key="instagram"
-              index={3}
-              label="Instagram"
-              url="https://www.instagram.com/edifortiniphotography"
-              fontAwesomeIcon="fab-instagram"
-            />
-            <SocialLink
-              key="flickr"
-              index={4}
-              label="Flickr"
-              url="https://www.flickr.com/photos/efortini/albums"
-              fontAwesomeIcon="fab-flickr"
-            />
-            <SocialLink
-              key="photos"
-              index={5}
-              label="Photos"
-              url="https://edifortini.46graus.com"
-              fontAwesomeIcon="images"
-            />
-            <SocialLink
-              key="facebook"
-              index={6}
-              label="Facebook"
-              url="https://www.facebook.com/EdiFortini"
-              fontAwesomeIcon="fab-facebook"
-            />
-          </SocialLinks>
-        </SiteNavRight>
-      </StyledHeader>
+      <Hero>
+        <StyledLogo src={Logo} alt="Home" />
+        <StyledHeader invert={invert}>
+          <SiteNavLeft>
+            <SiteNav isHome />
+          </SiteNavLeft>
+          <SiteNavRight>
+            <SocialLinks>
+              <SocialLink
+                key="linkedin"
+                index={1}
+                label="LinkedIn"
+                url="https://www.linkedin.com/in/edifortini"
+                fontAwesomeIcon="fab-linkedin"
+              />
+              <SocialLink
+                key="twitter"
+                index={2}
+                label="Twitter"
+                url="https://twitter.com/edifortini"
+                fontAwesomeIcon="fab-twitter"
+              />
+              <SocialLink
+                key="instagram"
+                index={3}
+                label="Instagram"
+                url="https://www.instagram.com/edifortiniphotography"
+                fontAwesomeIcon="fab-instagram"
+              />
+              <SocialLink
+                key="flickr"
+                index={4}
+                label="Flickr"
+                url="https://www.flickr.com/photos/efortini/albums"
+                fontAwesomeIcon="fab-flickr"
+              />
+              <SocialLink
+                key="photos"
+                index={5}
+                label="Photos"
+                url="https://edifortini.46graus.com"
+                fontAwesomeIcon="images"
+              />
+              <SocialLink
+                key="facebook"
+                index={6}
+                label="Facebook"
+                url="https://www.facebook.com/EdiFortini"
+                fontAwesomeIcon="fab-facebook"
+              />
+            </SocialLinks>
+          </SiteNavRight>
+        </StyledHeader>
+      </Hero>
     )
   }
 }
 
-export default Header
+export default HeaderHome
 
-Header.propTypes = {
+HeaderHome.propTypes = {
   invert: PropTypes.bool,
 }
 
-Header.defaultProps = {
+HeaderHome.defaultProps = {
   invert: true,
 }
