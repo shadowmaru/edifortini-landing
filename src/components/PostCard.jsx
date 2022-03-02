@@ -58,7 +58,7 @@ const PostCardContentLink = css`
 
 const PostCardTitle = styled.h2`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-style: normal;
   margin-top: 0;
 `
@@ -78,23 +78,23 @@ class PostCard extends Component {
         css={PostCardStyles}
       >
         {post.data.main_image && post.data.main_image.localFile && (
-          <Link className="post-card-image-link" css={PostCardImageLink} to={post.uid}>
+          <Link className="post-card-image-link" css={PostCardImageLink} to={`/${post.uid}`}>
             <PostCardImage className="post-card-image">
               {post.data.main_image &&
-                post.data.main_image.localFile &&
-                post.data.main_image.localFile.childImageSharp &&
-                post.data.main_image.localFile.childImageSharp.fluid && (
-                <Img
-                  alt={`${post.data.title.text} cover image`}
-                  style={{ height: '100%' }}
-                  fluid={post.data.main_image.localFile.childImageSharp.fluid}
-                />
-                )}
+                  post.data.main_image.localFile &&
+                  post.data.main_image.localFile.childImageSharp &&
+                  post.data.main_image.localFile.childImageSharp.fluid && (
+                    <Img
+                      alt={`${post.data.title.text} cover image`}
+                      style={{ height: '100%' }}
+                      fluid={post.data.main_image.localFile.childImageSharp.fluid}
+                    />
+                  )}
             </PostCardImage>
           </Link>
         )}
         <PostCardContent className="post-card-content">
-          <Link className="post-card-content-link" css={PostCardContentLink} to={post.uid}>
+          <Link className="post-card-content-link" css={PostCardContentLink} to={`/${post.uid}`}>
             <header className="post-card-header">
               <div>{categories && <Categories categories={categories} />}</div>
               <PostCardTitle>{post.data.title.text}</PostCardTitle>
