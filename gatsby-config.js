@@ -6,7 +6,7 @@ const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
 
 const website = require('./config/website')
 
-const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
+const pathPrefix = website.pathPrefix === '/' ? '/' : website.pathPrefix
 
 module.exports = {
   /* General Information */

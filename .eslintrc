@@ -17,16 +17,16 @@
   "rules": {
     "no-unused-vars": [
       1,
-      {
-        "argsIgnorePattern": "res|next|stage|^err|on|config"
-      }
+    {
+      "argsIgnorePattern": "res|next|stage|^err|on|config"
+    }
     ],
     "arrow-body-style": [2, "as-needed"],
     "no-param-reassign": [
       2,
-      {
-        "props": false
-      }
+    {
+      "props": false
+    }
     ],
     "no-unused-expressions": [
       1, {
@@ -54,35 +54,36 @@
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-filename-extension": [
       1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
+    {
+      "extensions": [".js", ".jsx"]
+    }
     ],
     "quotes": [
       2,
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
+    "single",
+    {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }
     ],
     "indent": ["error", 2, {"SwitchCase": 1}],
     "prettier/prettier": [
       "error",
-      {
-        "trailingComma": "es5",
-        "semi": false,
-        "singleQuote": true,
-        "printWidth": 120
-      }
+    {
+      "trailingComma": "es5",
+      "semi": false,
+      "singleQuote": true,
+      "printWidth": 120
+    }
     ],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": [
       "warn",
-      {
-        "aspects": ["invalidHref"]
-      }
-    ]
+    {
+      "aspects": ["invalidHref"]
+    }
+    ],
+    "@emotion/pkg-renaming": "error"
   },
-  "plugins": ["prettier", "react-hooks"]
+  "plugins": ["prettier", "react-hooks", "@emotion"]
 }

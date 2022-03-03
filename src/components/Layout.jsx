@@ -4,8 +4,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Global, css } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
+import { Global, css, ThemeProvider } from '@emotion/react'
+
 import '@reach/skip-nav/styles.css'
 import 'react-tippy/dist/tippy.css'
 

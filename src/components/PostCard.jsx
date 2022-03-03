@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
@@ -78,23 +78,23 @@ class PostCard extends Component {
         css={PostCardStyles}
       >
         {post.data.main_image && post.data.main_image.localFile && (
-          <Link className="post-card-image-link" css={PostCardImageLink} to={post.uid}>
+          <Link className="post-card-image-link" css={PostCardImageLink} to={`/${post.uid}`}>
             <PostCardImage className="post-card-image">
               {post.data.main_image &&
                 post.data.main_image.localFile &&
                 post.data.main_image.localFile.childImageSharp &&
                 post.data.main_image.localFile.childImageSharp.fluid && (
-                <Img
+                  <Img
                   alt={`${post.data.title.text} cover image`}
-                  style={{ height: '100%' }}
+                    style={{ height: '100%' }}
                   fluid={post.data.main_image.localFile.childImageSharp.fluid}
-                />
-                )}
+                  />
+              )}
             </PostCardImage>
           </Link>
         )}
         <PostCardContent className="post-card-content">
-          <Link className="post-card-content-link" css={PostCardContentLink} to={post.uid}>
+          <Link className="post-card-content-link" css={PostCardContentLink} to={`/${post.uid}`}>
             <header className="post-card-header">
               <div>{categories && <Categories categories={categories} />}</div>
               <PostCardTitle>{post.data.title.text}</PostCardTitle>
