@@ -10,7 +10,7 @@ const Item = styled.li`
 
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   color: ${props => props.theme.colors.grey};
   margin-bottom: 0;
   a {
@@ -37,7 +37,7 @@ export default class ListItem extends Component {
         <Headline>
           {node.data.date} — {categories && <Categories categories={categories} />}
         </Headline>
-        <StyledLink to={node.uid}>{node.data.title.text}</StyledLink>
+        <StyledLink to={`/${node.uid}`}>{node.data.title.text}</StyledLink>
       </Item>
     )
   }
