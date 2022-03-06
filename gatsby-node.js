@@ -27,8 +27,12 @@ exports.createPages = async ({ graphql, actions }) => {
                 categories {
                   category {
                     document {
-                      data {
-                        name
+                      ... on PrismicPost {
+                        data {
+                          title {
+                            text
+                          }
+                        }
                       }
                     }
                   }

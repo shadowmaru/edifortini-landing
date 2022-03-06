@@ -34,6 +34,14 @@ module.exports = {
       options: {
         repositoryName: 'edi-fortini-landing',
         accessToken: `${process.env.API_KEY}`,
+        schemas: {
+          about: require('./.prismic/about.json'),
+          category: require('./.prismic/category.json'),
+          contact: require('./.prismic/contact.json'),
+          hero_links: require('./.prismic/hero_links.json'),
+          post: require('./.prismic/post.json'),
+        },
+        // customTypesApiToken: `${process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN}`,
         // Get the correct URLs in blog posts
         linkResolver: () => post => `/${post.uid}`,
         // PrismJS highlighting for labels and slices
@@ -41,6 +49,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-lodash',
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

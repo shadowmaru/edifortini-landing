@@ -15,7 +15,7 @@
               "label" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
+                  "multi" : "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em",
                   "label" : "Label",
                   "placeholder" : "Name of the link"
                 }
@@ -25,7 +25,16 @@
                 "config" : {
                   "allowTargetBlank" : true,
                   "label" : "Link",
-                  "placeholder" : "Link to the external project"
+                  "placeholder" : "Link to the external project",
+                  "select" : null
+                }
+              },
+              "font_awesome_icon" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "FontAwesome Icon",
+                  "placeholder" : "Name of the icon"
                 }
               }
             },

@@ -30,40 +30,40 @@ const SiteTitle = styled.h1`
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 3.8rem;
   font-weight: 700;
 `
 
 const SiteDescription = styled.h2`
-  z-index: 10;
-  margin: 0;
-  padding: 5px 0;
-  font-size: 1.8rem;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  opacity: 0.8;
-  color: ${props => props.theme.colors.primary};
+z-index: 10;
+margin: 0;
+padding: 5px 0;
+font-size: 1.8rem;
+font-weight: 300;
+letter-spacing: 0.5px;
+opacity: 0.8;
+color: ${props => props.theme.colors.primary};
 `
 
 const inner = css`
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
+margin: 0 auto;
+max-width: 1040px;
+width: 100%;
 `
 const postFeed = css`
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-  padding: 40px 0 0 0;
+position: relative;
+display: flex;
+flex-wrap: wrap;
+margin: 0 -20px;
+padding: 40px 0 0 0;
 `
 
 const postFeedRaise = css`
-  @media (min-width: 900px) {
-    margin-top: -50px;
-    padding-top: 0;
-  }
+@media (min-width: 900px) {
+  margin-top: -50px;
+  padding-top: 0;
+}
 `
 
 const CatWrapper = Wrapper.withComponent('main')
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
       sort: { fields: [data___date], order: DESC }
       filter: {
         data: {
-          categories: { elemMatch: { category: { document: { elemMatch: { data: { name: { eq: $category } } } } } } }
+          categories: { elemMatch: { category: { eq: $category } } }
         }
       }
     ) {

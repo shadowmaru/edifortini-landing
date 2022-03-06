@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 
 const Content = styled.div`
   padding-top: 1.5rem;
@@ -10,7 +10,7 @@ const Content = styled.div`
 
 const Image = ({ input }) => (
   <Content>
-    <Img fluid={input.primary.image.localFile.childImageSharp.fluid} />
+    <GatsbyImage image={input.primary.image.localFile.childImageSharp.gatsbyImageData} />
   </Content>
 )
 

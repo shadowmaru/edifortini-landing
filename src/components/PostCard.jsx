@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Categories from './Listing/Categories'
 
 const PostCardStyles = css`
@@ -58,7 +58,7 @@ const PostCardContentLink = css`
 
 const PostCardTitle = styled.h2`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-style: normal;
   margin-top: 0;
 `
@@ -81,15 +81,15 @@ class PostCard extends Component {
           <Link className="post-card-image-link" css={PostCardImageLink} to={`/${post.uid}`}>
             <PostCardImage className="post-card-image">
               {post.data.main_image &&
-                post.data.main_image.localFile &&
-                post.data.main_image.localFile.childImageSharp &&
-                post.data.main_image.localFile.childImageSharp.fluid && (
-                  <Img
-                  alt={`${post.data.title.text} cover image`}
-                    style={{ height: '100%' }}
-                  fluid={post.data.main_image.localFile.childImageSharp.fluid}
-                  />
-              )}
+                  post.data.main_image.localFile &&
+                  post.data.main_image.localFile.childImageSharp &&
+                  post.data.main_image.localFile.childImageSharp.gatsbyImageData && (
+                    <GatsbyImage
+                      alt={`${post.data.title.text} cover image`}
+                      style={{ height: '100%' }}
+                      image={post.data.main_image.localFile.childImageSharp.gatsbyImageData}
+                    />
+                  )}
             </PostCardImage>
           </Link>
         )}

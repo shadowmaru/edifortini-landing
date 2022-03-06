@@ -95,7 +95,7 @@ class Layout extends Component {
             prismicHomepage {
               data {
                 footer {
-                  html
+                  text
                 }
               }
             }

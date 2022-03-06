@@ -109,7 +109,7 @@ export const pageQuery = graphql`
           text
         }
         content {
-          html
+          text
         }
       }
     }
@@ -142,9 +142,7 @@ export const pageQuery = graphql`
             main_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 1200, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
             }
@@ -152,8 +150,10 @@ export const pageQuery = graphql`
             categories {
               category {
                 document {
-                  data {
-                    name
+                  ... on PrismicCategory {
+                    data {
+                      name
+                    }
                   }
                 }
               }
